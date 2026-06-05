@@ -1,6 +1,3 @@
-import time
-import urllib.request
-
 import pytest
 from playwright.sync_api import Page, expect
 import main
@@ -11,12 +8,6 @@ BASE_URL = "http://localhost:7861"
 @pytest.fixture(scope="session", autouse=True)
 def gradio_server():
     main.demo.launch(prevent_thread_lock=True, server_port=7861, share=False)
-    # for _ in range(30):
-    #     try:
-    #         urllib.request.urlopen(BASE_URL)
-    #         break
-    #     except Exception:
-    #         time.sleep(0.5)
     yield
     main.demo.close()
 
