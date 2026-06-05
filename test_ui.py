@@ -5,11 +5,11 @@ import main
 BASE_URL = "http://localhost:7860" # fix with actual dployment
 
 
-# @pytest.fixture(scope="session", autouse=True)
-# def gradio_server():
-#     main.demo.launch(prevent_thread_lock=True, server_port=7861, share=False)
-#     yield
-#     main.demo.close()
+@pytest.fixture(scope="session", autouse=True)
+def gradio_server():
+    main.demo.launch(prevent_thread_lock=True, server_port=7861, share=False)
+    yield
+    main.demo.close()
 
 
 # ── Page load 
