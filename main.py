@@ -44,11 +44,14 @@ with gr.Blocks(title="Dominant Colour Finder") as demo:
 
     with gr.Row():
         with gr.Column(scale=1):
-            image_input = gr.Image(label="Upload an image", type="filepath", height=350)
-            top_n_input = gr.Slider(label="Number of colours to show", minimum=1, maximum=10, value=3, step=1)  
-            button = gr.Button("Find Dominant Colours", variant="primary", size="lg")
+            image_input = gr.Image(label="Upload an image", type="filepath", height=350, elem_id="image-input")
+
+            top_n_input = gr.Slider(label="Number of colours to show", minimum=1, maximum=10, value=3, step=1, elem_id="top-n-slider")
+
+            button = gr.Button("Find Dominant Colours", variant="primary", size="lg", elem_id="find-colours-btn")
+
         with gr.Column(scale=1):
-            result_output = gr.HTML(label="Dominant Colours")
+            result_output = gr.HTML(label="Dominant Colours", elem_id="result-output")
 
     button.click(
         fn=dominant_colours,
