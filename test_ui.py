@@ -2,7 +2,7 @@ import pytest
 from playwright.sync_api import Page, expect
 import main
 
-BASE_URL = "http://localhost:7860"
+BASE_URL = "http://localhost:7860" # fix with actual dployment
 
 
 # @pytest.fixture(scope="session", autouse=True)
