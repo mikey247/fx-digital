@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+
+# Pytest
+.pytest_cache/
+
+# Gradio
+.gradio/
+
+# mypy
+.mypy_cache/
+
+# macOS
+.DS_Store
