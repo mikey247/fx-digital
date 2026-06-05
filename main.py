@@ -39,7 +39,7 @@ def dominant_colours(image, top_n=1):
 
 
 with gr.Blocks(title="Dominant Colour Finder") as demo:
-    gr.Markdown("# Dominant Colour Finder")
+    gr.Markdown("# Dominant Colour Finder. ")
     gr.Markdown("Upload any image to extract its top dominant colours.")
 
     with gr.Row():
