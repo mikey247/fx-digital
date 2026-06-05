@@ -55,6 +55,7 @@ A GitHub Actions workflow (`.github/workflows/test.yml`) runs the full suite aut
 ├── colors.py          # Core logic — image loading, rounding, counting
 ├── main.py            # Gradio UI
 ├── test_colors.py     # Pytest unit tests
+├── test_ui.py         # Playwright tests
 ├── requirements.txt
 └── .github/
     └── workflows/
